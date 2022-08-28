@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAweome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <!-- Mulai Quiz button -->
+    <div class="start_btn"><button>Mulai Quiz</button></div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Aturan Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. Anda hanya memiliki <span>10 detik</span> untuk setiap pertanyaan.</div>
+            <div class="info">2. Setelah anda memilih jawaban, jawaban tersebut tidak bisa diganti.</div>
+            <div class="info">3. Jika waktu habis dan anda tidak bisa menjawab pertanyaan. Soal dinyatakan tidak memiliki poin.</div>
+            <div class="info">4. Anda tidak dapat keluar dari Quiz saat Anda menjawab soal.</div>
+            <div class="info">5. Anda akan mendapatkan poin berdasarkan jawaban yang benar.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Keluar Quiz</button>
+            <button class="restart">Lanjut</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Aplikasi Quiz</div>
+            <div class="timer">
+                <div class="time_left_txt">Waktu tersisa</div>
+                <div class="timer_sec">10</div>
+            </div>
+            <div class="time_line">
+              <!-- Waktu Loading garis -->
+            </div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Pertanyaan -->
+            </div>
+            <div class="option_list">
+                <!-- Opsi Jawaban -->
+            </div>
+        </section>
+
+        <!-- Footer Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Jumlah Nomer Pertanyaan -->
+            </div>
+            <button class="next_btn">Soal Selanjutnya</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Anda telah menyelesaikan Quis!</div>
+        <div class="score_text">
+            <!-- Score Soal -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Ulangi Quiz</button>
+            <button class="quit">Keluar Quiz</button>
+        </div>
+    </div>
+
+    <!-- Soal Quiz -->
+    <script src="js/questions.js"></script>
+
+    <!-- Kode Quiz  -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+</html>
