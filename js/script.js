@@ -20,14 +20,14 @@ exit_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); 
 }
 
-// if continueQuiz button clicked
+// jika tombol Lanjut di klik maka quiz akan dimulai
 continue_btn.onclick = ()=>{
-    info_box.classList.remove("activeInfo"); //hide info box
-    quiz_box.classList.add("activeQuiz"); //show quiz box
-    showQuetions(0); //calling showQestions function
-    queCounter(1); //passing 1 parameter to queCounter
-    startTimer(10); //calling startTimer function
-    startTimerLine(0); //calling startTimerLine function
+    info_box.classList.remove("activeInfo"); // sembunyikan info box
+    quiz_box.classList.add("activeQuiz"); // tampilkan quiz box
+    showQuetions(0); // memanggil fungsi showQuetions
+    queCounter(1); // meneruskan 1 parameter ke queCounter
+    startTimer(10); // memanggil fungsi startTimer
+    startTimerLine(0); // memanggil fungsi startTimerLine
 }
 
 let timeValue =  10;
@@ -41,36 +41,36 @@ let widthValue = 0;
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
 
-// if restartQuiz button clicked
+// jika tombol Ulangi Quiz diklik maka akan mengulang Quiz
 restart_quiz.onclick = ()=>{
-    quiz_box.classList.add("activeQuiz"); //show quiz box
-    result_box.classList.remove("activeResult"); //hide result box
+    quiz_box.classList.add("activeQuiz"); // tampilkan quiz box
+    result_box.classList.remove("activeResult"); // sembunyikan result box
     timeValue = 10; 
     que_count = 0;
     que_numb = 1;
     userScore = 0;
     widthValue = 0;
-    showQuetions(que_count); //calling showQestions function
-    queCounter(que_numb); //passing que_numb value to queCounter
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
-    startTimer(timeValue); //calling startTimer function
-    startTimerLine(widthValue); //calling startTimerLine function
-    timeText.textContent = "Waktu tersisa"; //change the text of timeText to Time Left
-    next_btn.classList.remove("show"); //hide the next button
+    showQuetions(que_count); // memanggil fungsi showQestions
+    queCounter(que_numb); // meneruskan nilai que_numb ke queCounter
+    clearInterval(counter); // hapus counter
+    clearInterval(counterLine); // hapus counterline
+    startTimer(timeValue); // memanggil fungsi startTimer 
+    startTimerLine(widthValue); // memanggil fungsi startTimerLine
+    timeText.textContent = "Waktu tersisa"; // ubah teks timeText menjadi Time Left
+    next_btn.classList.remove("show"); // sembunyikan tombol soal selanjutnya
 }
 
-// if quitQuiz button clicked
+// jika tombol Keluar Quiz diklik maka akan mereload halaman
 quit_quiz.onclick = ()=>{
-    window.location.reload(); //reload the current window
+    window.location.reload(); 
 }
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
-// if Next Que button clicked
+// jika tombol Soal Selanjutnya diklik maka 
 next_btn.onclick = ()=>{
-    if(que_count < questions.length - 1){ //if question count is less than total question length
+    if(que_count < questions.length - 1){ // 
         que_count++; //increment the que_count value
         que_numb++; //increment the que_numb value
         showQuetions(que_count); //calling showQestions function
